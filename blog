@@ -1,0 +1,145 @@
+import {
+  Box,
+  IconButton,
+  VStack,
+  Avatar,
+  Text,
+  Input,
+  InputRightElement,
+  InputGroup,
+  InputLeftElement,
+  HStack,
+  Editable,
+  EditableInput,
+  EditableTextarea,
+  EditablePreview,
+  Button,
+  Image,
+  Container,
+  Flex
+} from "@chakra-ui/react";
+import {
+  CheckIcon,
+  CloseIcon,
+  HamburgerIcon,
+  SearchIcon
+} from "@chakra-ui/icons";
+
+export const App = () => {
+  return (
+    <Container px="32px" py="32px" maxWidth="100%">
+      <Flex>
+        <HStack py="{0}">
+          <Image
+            w="40px"
+            src="https://th.bing.com/th/id/R.0795889f4b6a1fa09cdb40312a7d019a?rik=AeZ3WWcWJfwjLg&pid=ImgRaw&r=0"
+          />
+          <Flex fontWeight="semibold" fontStyle="normal" fontSize="32px">
+            FlexiBlog
+          </Flex>
+        </HStack>
+        <HStack py="0px" spacing={8}>
+          <Flex position="fixed" right="20rem">
+            <Flex display={["none", "none", "flex", "flex"]}>
+              <InputGroup>
+                <InputLeftElement
+                  pointerEvents="none"
+                  color="gray"
+                  fontSize="1.7em"
+                />
+                <Input placeholder="Discover news articles and more" />
+                <InputLeftElement children={<SearchIcon color="green.500" />} />
+              </InputGroup>
+            </Flex>
+          </Flex>
+
+          <Flex position="fixed" padding-top="0" right="1rem">
+            <Flex display={["none", "none", "flex", "flex"]}>
+              <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
+                Home
+              </Button>
+
+              <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
+                About
+              </Button>
+
+              <Button
+                as="a"
+                variant="ghost"
+                aria-label="Contact"
+                my={5}
+                w="100%"
+              >
+                Contact
+              </Button>
+            </Flex>
+            <IconButton
+              aria-label="Open Menu"
+              size="lg"
+              mr={2}
+              icon={<SearchIcon />}
+              display={["flex", "flex", "none", "none"]}
+            />
+            <IconButton
+              aria-label="Open Menu"
+              size="lg"
+              mr={2}
+              icon={<HamburgerIcon />}
+              display={["flex", "flex", "none", "none"]}
+            />
+          </Flex>
+        </HStack>
+      </Flex>
+      <Flex borderWidth="0" py={35} textAlign="center" w="100%">
+        <VStack>
+          <Text fontWeight="bold" fontSize="30px">
+            Hi, I'm Jane Smith.
+            <br />
+            UX/UI Designer
+          </Text>
+          <Text fontSize="15px" fontWeight="bold">
+            Specialized in Gatsby and React
+          </Text>
+          <Flex>
+            <HStack px={13}>
+              <Button borderRadius="15px" colorScheme="teal" size="lg">
+                Contact Me
+              </Button>
+              <Button colorScheme="gray" size="lg" borderRadius="15px">
+                About Me
+              </Button>
+            </HStack>
+          </Flex>
+        </VStack>
+        <HStack display={["none", "none", "flex", "flex"]} px={200}>
+          {" "}
+          <Avatar
+            size="2xl"
+            name="Christian Nwamba"
+            src="https://bit.ly/code-beast"
+          />
+        </HStack>
+      </Flex>
+      <Flex borderWidth="1px">
+        <Flex >
+          <Flex borderWidth="1px">           
+            <VStack>
+              <Flex>da dada sdasd as asdasd  asdasd  asdasddasd asdasds dfsdf adfsdff</Flex>
+              <Flex>da dada sdasd as asdasd  asdasd  asdasddasd asdasds dfsdf adfsdff</Flex>
+              </VStack>             
+              </Flex>
+              <Flex borderWidth="1px">           
+            <VStack>
+              <Flex>da dada sdasd as asdasd  asdasd  asdasddasd asdasds dfsdf adfsdff</Flex>
+              <Flex>da dada sdasd as asdasd  asdasd  asdasddasd asdasds dfsdf adfsdff</Flex>
+              <Flex>da dada sdasd as asdasd  asdasd  asdasddasd asdasds dfsdf adfsdff</Flex>
+              </VStack>             
+              </Flex>
+             
+         
+    
+      </Flex>
+      </Flex>
+    </Container>
+  );
+};
